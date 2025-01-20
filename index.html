@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operators</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ddd;  
+            color: black;                
+            font-family: sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+            background-color: gray;
+
+        h2 {
+        	margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+	<h1> If x = 5 and y = 7, compute for the following:
+    <h2>Arithmetic Operator</h2>
+    <p>a. Exponent: <span id="demo"></span></p>
+    <p>b. Mod: <span id="demo2"></span></p>
+    <button type="button" class="btn btn-info" onclick="showAnswers('arithmetic')">Show Answer</button>
+
+    <h2>Comparison Operator</h2>
+    <p>a. is x greater than y?: <span id="demo3"></span></p>
+    <p>b. is x equal to y?: <span id="demo4"></span></p>
+    <button type="button" class="btn btn-info" onclick="showAnswers('comparison')">Show Answer</button>
+
+    <h2>Logical Operator</h2>
+    <p>a. (x <= y) &amp;&amp; (x &gt;= y): <span id="demo5"></span></p>
+    <p>b. (x != y) || (x == y): <span id="demo6"></span></p>
+    <button type="button" class="btn btn-info" onclick="showAnswers('logical')">Show Answer</button>
+
+    <script>
+        let x = 5;
+        let y = 7;
+
+        function showAnswers(type) {
+            if (type === 'arithmetic') {
+                document.getElementById("demo").innerHTML = x ** x;
+                document.getElementById("demo2").innerHTML = x % y;
+            } else if (type === 'comparison') {
+                document.getElementById("demo3").innerHTML = (x > y);
+                document.getElementById("demo4").innerHTML = (x == y);
+            } else if (type === 'logical') {
+                document.getElementById("demo5").innerHTML = (x <= y) && (x >= y);
+                document.getElementById("demo6").innerHTML = (x != y) || (x == y);
+            }
+        }
+    </script>
+</body>
+</html>
